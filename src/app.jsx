@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const App = ({ saludo }) => {
   return (
@@ -7,6 +8,10 @@ const App = ({ saludo }) => {
       <p>Mi primera aplicacion</p>
     </>
   );
+};
+
+App.propTypes = {
+  saludo: PropTypes.string.isRequired,
 };
 
 export default App;
