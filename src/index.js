@@ -5,4 +5,4 @@ import App from './app';
 
 const divRoot = document.querySelector('#app');
 
-ReactDOM.render(<App />, divRoot);
+ReactDOM.render(<App saludo="Hola, Soy Rafael" />, divRoot);
