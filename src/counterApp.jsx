@@ -8,11 +8,21 @@ const CounterApp = ({ value }) => {
     setCounter(counter + 1);
   };
 
+  const handleReset = () => {
+    setCounter(value);
+  };
+
+  const handleSubtract = () => {
+    setCounter(counter - 1);
+  };
+
   return (
     <>
       <h1>Counter App</h1>
       <h2>{counter}</h2>
-      <button onClick={handleAdd}>Incrementar +1</button>
+      <button onClick={handleAdd}> +1</button>
+      <button onClick={handleReset}> Reset</button>
+      <button onClick={handleSubtract}> -1</button>
     </>
   );
 };
