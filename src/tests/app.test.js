@@ -16,4 +16,12 @@ describe('Prueba de App.jsx', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  test('should be show subtitle', () => {
+    const saludo = 'hola soy rafael';
+    const subtitle = 'soy un subtitle';
+    const wrapper = shallow(<App saludo={saludo} subtitulo={subtitle} />);
+    const textSubtitle = wrapper.find('p').text();
+    expect(textSubtitle).toBe(subtitle);
+  });
 });
